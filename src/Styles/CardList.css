@@ -1,0 +1,61 @@
+.card--list--main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card--list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    width: 75vw;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card--list--item{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    gap: 1rem;
+    min-height: 57.5rem;
+}
+
+.desc {
+    flex-grow: 1;
+}
+
+.card--list--item > h2 {
+    min-height: 6rem;
+}
+
+.desc > p {
+    cursor: pointer;
+    color: red;
+}
+
+.navigation--buttons{
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.navigation--buttons > button, .card--list--item > button{
+    height: 2rem;
+    background-color: red;
+    border: none;
+    border-radius: .25rem;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navigation--buttons > button{
+    width: 5rem;
+}
+
+.navigation--buttons > button:hover, .card--list--item > button:hover{
+    background-color: rgb(190, 29, 29);
+}

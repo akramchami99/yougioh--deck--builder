@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    background-color: rgb(133, 43, 43);
+}
+
+nav img{
+    width: 15rem;
+}
+
+.nav--links {
+    text-decoration: none;
+    color: white;
+    font-size: 1.25rem;
+}

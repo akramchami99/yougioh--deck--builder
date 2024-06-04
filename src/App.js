@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState } from 'react';
+import {  Route, Routes } from 'react-router-dom';
+import Navbar from './Components/NavBar';
+import CardList from './Components/CardList';
+import Deck from './Components/Deck';
 
 function App() {
+  const [deck, setDeck] = useState(JSON.parse(localStorage.getItem('deck')) || []);
+
+  const addToDeck = (card) => {
+    const updatedDeck = [...deck, card];
+    setDeck(updatedDeck);
+    localStorage.setItem('deck', JSON.stringify(updatedDeck));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<CardList addToDeck={addToDeck} />} />
+          <Route path="/deck" element={<Deck />} />
+        </Routes>
+      </div>
   );
 }
 

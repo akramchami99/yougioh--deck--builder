@@ -1,0 +1,54 @@
+.deck--main{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.deck--tabs{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.deck--list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.search--main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search--bar{
+    display: flex;
+    gap: 1rem;
+}
+
+.search--bar input{
+    width: 15rem;
+    height: 2rem;
+    border-radius: .25rem;
+    border: none;
+    background-color: rgb(230, 230, 230);
+    padding: 1rem;
+}
+
+.search--bar button,.deck--list > button {
+    border: none;
+    cursor: pointer;
+    padding: .5rem;
+    border-radius: .25rem;
+    color: white;
+    background-color: red;
+    transition: .5s;
+}
+
+.search--bar button:hover,.deck--list > button:hover{
+    background-color: rgb(190, 29, 29);
+}
+
