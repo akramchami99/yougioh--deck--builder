@@ -72,7 +72,7 @@ const Deck = () => {
               </div>
             ))}
           </div>
-          {deck == "" ? <h3>Add some cards to your deck</h3>: <button onClick={deleteAllCards}>Delete All Cards</button>}
+          {deck === "" ? <h3>Add some cards to your deck</h3>: <button onClick={deleteAllCards}>Delete All Cards</button>}
         </div>
         <div className='search--main'>
           <div className='search--bar'>
